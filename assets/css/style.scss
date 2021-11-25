@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+/* Variables */
+$black: #000;
+$white: #FFF;
+$blue: #CAE8E3;
+$pink: #F6E4D5;
+$yellow: #FFD080;
+$border: 0.2rem solid $black;
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $black;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 9%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .brand {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $black;
+    }
+
+    .navbar a {
+        margin: 0 1rem;
+        font-size: 2rem;
+        color: $black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 0;
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        color: $white;
+        background: $black;
+        border: $border;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background: none;
+            color: $black;
+        }
+    }
+}
+
+#menu-btn {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/* --- MEDIA QUERY --- */
+/* Extra Large devices */
+@media (max-width: 1200px) {
+    header {
+        padding: 2rem;
+    }
+}
+
+/* Large devices */
+@media (max-width: 992px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Medium custom devices */
+@media (max-width: 840px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+        transition: 0.3s linear;
+
+        &.fa-times {
+            transform: rotate(90deg);
+        }
+    }
+    
+    header {
+
+        .navbar {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: $white;
+            border-top: $border;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: 0.3s linear;
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a {
+                display: block;
+                margin: 0;
+                padding: 1.5rem 2rem;
+            }
+        }
+
+        .btn {
+            display: none;
+        }
+
+
+    }
+}

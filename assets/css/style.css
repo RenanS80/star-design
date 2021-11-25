@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+/* Variables */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #FFF;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header .brand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+header .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #000;
+}
+
+header .navbar a:hover {
+  text-decoration: underline;
+}
+
+header .btn {
+  display: inline-block;
+  margin-top: 0;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: #FFF;
+  background: #000;
+  border: 0.2rem solid #000;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+header .btn:hover {
+  background: none;
+  color: #000;
+}
+
+#menu-btn {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* --- MEDIA QUERY --- */
+/* Extra Large devices */
+@media (max-width: 1200px) {
+  header {
+    padding: 2rem;
+  }
+}
+
+/* Large devices */
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Medium custom devices */
+@media (max-width: 840px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  #menu-btn.fa-times {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    border-top: 0.2rem solid #000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    display: block;
+    margin: 0;
+    padding: 1.5rem 2rem;
+  }
+  header .btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
