@@ -86,7 +86,7 @@ header {
 
 .btn {
     display: inline-block;
-    margin-top: 0;
+    margin-top: 1rem;
     padding: 1rem 3rem;
     font-size: 2rem;
     color: $white;
@@ -213,10 +213,113 @@ section {
     }
 }
 
+/* -- SECTION ABOUT -- */
+.about {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .image {
+        flex: 1 1 42rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        flex: 1 1 42rem;
+
+        h3 {
+            font-size: 4rem;
+            line-height: 1.5;
+        }
+
+        p {
+            font-size: 1.7rem;
+            line-height: 1.8;
+            padding: 1rem;
+        }
+    }
+}
 
 
+/* -- SECTION ABOUT -- */
+.steps {
+    background: $blue;
+
+    .box-container {
+        @include grid(32rem);
+
+        .box {
+            text-align: center;
+            padding: 3rem 2rem;
+
+            img {
+                height: 20rem;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+                padding: 1.5rem 0;
+            }
+
+            p {
+                font-size: 1.7rem;
+                line-height: 2;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
 
 
+/* -- SECTION FEATURES -- */
+.features {
+
+    .box-container .box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        min-height: 60vh;
+        margin-bottom: 3rem;
+
+        &:nth-child(even) {
+            flex-flow: row-reverse wrap;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .image {
+            flex: 1 1 42rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 42rem;
+
+            h3 {
+                font-size: 3rem;
+                line-height: 1.5;
+            }
+
+            p {
+                padding: 1.5rem 0;
+                line-height: 2;
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+}
 
 
 
@@ -299,5 +402,11 @@ section {
 @media (max-width: 450px) {
     .heading h1 {
         font-size: 3rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 2.3rem;
     }
 }
