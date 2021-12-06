@@ -32,6 +32,22 @@
   }
 }
 
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -361,6 +377,256 @@ section {
   font-size: 1.7rem;
 }
 
+/* -- SECTION PRICING -- */
+.pricing {
+  background: #F6E4D5;
+  text-align: center;
+}
+
+.pricing .price-toggler {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  background: #FFF;
+  border: 0.2rem solid #000;
+}
+
+.pricing .price-toggler span {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #000;
+  border-radius: 0.5rem;
+}
+
+.pricing .price-toggler span.active {
+  background: #000;
+  color: #FFF;
+}
+
+.pricing .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+
+.pricing .box-container .box {
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  background: #FFF;
+}
+
+.pricing .box-container .box:nth-child(2) {
+  border: 0.2rem solid #000;
+}
+
+.pricing .box-container .box:nth-child(2) h3 {
+  background: #F6E4D5;
+}
+
+.pricing .box-container .box h3 {
+  font-size: 2rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background: #CAE8E3;
+  margin-bottom: 1rem;
+}
+
+.pricing .box-container .box .price {
+  padding: 2rem 0;
+}
+
+.pricing .box-container .box .price .month,
+.pricing .box-container .box .price .year {
+  font-size: 5rem;
+  -webkit-animation: fadeUp 0.2s linear backwards;
+          animation: fadeUp 0.2s linear backwards;
+}
+
+.pricing .box-container .box .price .month span,
+.pricing .box-container .box .price .year span {
+  font-size: 3rem;
+}
+
+.pricing .box-container .box .price .year {
+  display: none;
+}
+
+.pricing .box-container .box .list {
+  padding: 1rem 0;
+}
+
+.pricing .box-container .box .list p {
+  padding: 1.5rem 0;
+  font-size: 1.7rem;
+}
+
+.pricing .box-container .box .list p i {
+  padding-right: 0.5rem;
+}
+
+/* -- SECTION REVIEW -- */
+.review .slide-container .slide {
+  text-align: center;
+  max-width: 60rem;
+  margin: 1rem auto;
+  display: none;
+}
+
+.review .slide-container .slide.active {
+  display: block;
+}
+
+.review .slide-container .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: fadeUp 0.2s linear backwards;
+          animation: fadeUp 0.2s linear backwards;
+}
+
+.review .slide-container .slide p {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  line-height: 2;
+  -webkit-animation: fadeUp 0.2s linear 0.4s backwards;
+          animation: fadeUp 0.2s linear 0.4s backwards;
+}
+
+.review .slide-container .slide h3 {
+  padding-bottom: 0.7rem;
+  font-size: 2rem;
+  -webkit-animation: fadeUp 0.2s linear 0.6s backwards;
+          animation: fadeUp 0.2s linear 0.6s backwards;
+}
+
+.review .slide-container .slide span {
+  display: block;
+  font-size: 1.7rem;
+  -webkit-animation: fadeUp 0.2s linear 0.8s backwards;
+          animation: fadeUp 0.2s linear 0.8s backwards;
+}
+
+.review .controls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.review .controls div {
+  margin: 0 1rem;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+
+.review .controls div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* -- SECTION FAQ -- */
+.faq {
+  background: #CAE8E3;
+}
+
+.faq .accordion-container {
+  max-width: 70rem;
+  margin: 1rem auto;
+}
+
+.faq .accordion-container .accordion {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  background: #FFF;
+}
+
+.faq .accordion-container .accordion.active .accordion-heading i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faq .accordion-container .accordion.active .accordion-content {
+  display: block;
+}
+
+.faq .accordion-container .accordion .accordion-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.faq .accordion-container .accordion .accordion-heading h3 {
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.faq .accordion-container .accordion .accordion-heading i {
+  font-size: 2rem;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.faq .accordion-container .accordion .accordion-content {
+  padding: 1.5rem;
+  padding-top: 0;
+  line-height: 2;
+  font-size: 1.7rem;
+  display: none;
+  -webkit-animation: fadeUp 0.2s linear backwards;
+          animation: fadeUp 0.2s linear backwards;
+}
+
+/* -- FOOTER -- */
+.footer {
+  background: #F6E4D5;
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  padding-top: 2em;
+}
+
+.footer .box-container .box a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #000;
+}
+
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+
 /* --- MEDIA QUERY --- */
 /* Extra Large devices */
 @media (max-width: 1200px) {
@@ -435,6 +701,9 @@ section {
     width: 100%;
     text-align: center;
     font-size: 2.3rem;
+  }
+  .about .content .line-down::before {
+    background: transparent;
   }
 }
 /*# sourceMappingURL=style.css.map */
