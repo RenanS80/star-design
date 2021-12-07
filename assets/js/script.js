@@ -68,7 +68,7 @@ accordion.forEach(acc => {
 })
 
 
-// LOGIN
+// Login
 function eyeToggle(){
     let pass = document.getElementById('password')
     let eye1 = document.getElementById('eye1')
