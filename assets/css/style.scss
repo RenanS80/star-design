@@ -176,6 +176,7 @@ section {
     }
 }
 
+
 /* -- SECTION SERVICES -- */
 .heading {
     margin-bottom: 3rem;
@@ -537,6 +538,92 @@ section {
 }
 
 
+/* -- LOGIN -- */
+.login {
+    background: $blue;
+
+    .login-card {
+        background: $white;
+        border-radius: 0.5rem;
+        max-width: 90rem;
+        margin: 0 auto;
+
+        .login-card-container {
+            width: 60%;
+            margin: 0 auto;
+
+            .heading {
+                padding-top: 2.2rem;
+            }
+        }
+
+        .login-content {
+            padding-top: 2rem;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.7rem;
+            
+
+                label {
+                    display: block;
+                    padding-bottom: 0.8rem;
+                }
+
+                .input-email,
+                .input-password {
+                    width: 100%;
+                }
+
+                .input-password {
+                    margin: 3rem 0;
+                    position: relative;
+
+                    .eye {
+                        position: absolute;
+                        margin-top: 1.2rem;
+                        right: 1rem;
+                        cursor: pointer;
+                    }
+                }
+
+                .email,
+                .password {
+                    border: 1px solid $black;
+                    border-radius: 0.5rem;
+                    width: 100%;
+                    padding: 1.2rem;
+                    font-size: 1.5rem;
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+
+            p {
+                font-size: 1.6rem;
+                padding: 2.2rem 0;
+
+                .signup {
+                    font-weight: bold;
+                    color: $black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
 /* -- FOOTER -- */
 .footer {
     background: $pink;
@@ -660,4 +747,12 @@ section {
             background: transparent;
         }
     }
+}
+
+/* Medium custom devices */
+@media (max-width: 690px) {
+    .login-card-container {
+        width: 100% !important;
+        padding: 0 2rem;
+    }    
 }

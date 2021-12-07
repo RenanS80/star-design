@@ -66,3 +66,22 @@ accordion.forEach(acc => {
         acc.classList.toggle('active');
     }
 })
+
+
+// LOGIN
+function eyeToggle(){
+    let pass = document.getElementById('password')
+    let eye1 = document.getElementById('eye1')
+    let eye2 = document.getElementById('eye2')
+    
+    if(pass.type === 'password'){
+        pass.type = 'text';
+        eye1.classList.add('fa-eye-slash')
+        eye1.classList.remove('fa-eye')
+    }
+    else{
+        pass.type = 'password';
+        eye1.classList.remove('fa-eye-slash')
+        eye1.classList.add('fa-eye')
+    }
+}

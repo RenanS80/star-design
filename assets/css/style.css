@@ -592,6 +592,97 @@ section {
           animation: fadeUp 0.2s linear backwards;
 }
 
+/* -- LOGIN -- */
+.login {
+  background: #CAE8E3;
+}
+
+.login .login-card {
+  background: #FFF;
+  border-radius: 0.5rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.login .login-card .login-card-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.login .login-card .login-card-container .heading {
+  padding-top: 2.2rem;
+}
+
+.login .login-card .login-content {
+  padding-top: 2rem;
+}
+
+.login .login-card .login-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.7rem;
+}
+
+.login .login-card .login-content form label {
+  display: block;
+  padding-bottom: 0.8rem;
+}
+
+.login .login-card .login-content form .input-email,
+.login .login-card .login-content form .input-password {
+  width: 100%;
+}
+
+.login .login-card .login-content form .input-password {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.login .login-card .login-content form .input-password .eye {
+  position: absolute;
+  margin-top: 1.2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.login .login-card .login-content form .email,
+.login .login-card .login-content form .password {
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.login .login-card .login-content form .btn {
+  width: 100%;
+}
+
+.login .login-card .login-content p {
+  font-size: 1.6rem;
+  padding: 2.2rem 0;
+}
+
+.login .login-card .login-content p .signup {
+  font-weight: bold;
+  color: #000;
+}
+
+.login .login-card .login-content p .signup:hover {
+  text-decoration: underline;
+}
+
 /* -- FOOTER -- */
 .footer {
   background: #F6E4D5;
@@ -704,6 +795,14 @@ section {
   }
   .about .content .line-down::before {
     background: transparent;
+  }
+}
+
+/* Medium custom devices */
+@media (max-width: 690px) {
+  .login-card-container {
+    width: 100% !important;
+    padding: 0 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
